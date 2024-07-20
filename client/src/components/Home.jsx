@@ -1,17 +1,20 @@
-// import React from 'react'
+import React from 'react'
+import { useEffect } from 'react'
 import '../css/Home.css'
+import axios from 'axios'
 
-export const Home = () => {
+export const Home = ({}) => {
+  
+
   return (
     <div className="hero">
-        <div className="hero-content">
-            <h1 className='hero-text'>Book Shop</h1>
-            <p className='hero-description'>
-                Browse your books assigned by your teachers.
-            </p>
-        </div>
-
-        <div className="hero-image"></div>
+      <div className="hero-content">
+        <h1 className='hero-text'>Book Shop</h1>
+        <p className='hero-description'>
+          Browse your books assigned by your teachers.
+        </p>
+      </div>
+      <div className="hero-image"></div>
     </div>
   )
 }
