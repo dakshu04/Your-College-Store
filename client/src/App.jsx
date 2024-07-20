@@ -9,6 +9,8 @@ import { useState } from 'react';
 import { Logout } from './components/Logout';
 import axios from "axios"
 import { useEffect } from 'react';
+import AddBooks from './components/AddBook';
+
 
 function App() {
   const [role, setRole] = useState('')
@@ -39,6 +41,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} ></Route>
           <Route path="/addstudent" element={<AddStudent/>} ></Route>
           <Route path="/logout" element={<Logout setRole = {setRole}/>} ></Route>
+          <Route path="/addbook" element={<AddBooks />} ></Route>
         </Routes>
       </BrowserRouter>
     </>

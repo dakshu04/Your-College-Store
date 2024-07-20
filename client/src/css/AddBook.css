@@ -1,6 +1,6 @@
-/* AddStudent.css */
+/* AddBook.css */
 
-.student-form-container {
+.add-book-container {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@
     background: linear-gradient(to right, #6a11cb, #2575fc);
 }
 
-.student-form {
+.add-book-form {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -21,17 +21,17 @@
     margin: auto;
 }
 
-.student-form h2 {
+.add-book-form h2 {
     margin-bottom: 20px;
     text-align: center;
     color: #333;
 }
 
-.student-form .form-group {
+.add-book-form .form-group {
     margin-bottom: 15px;
 }
 
-.student-form .form-group label {
+.add-book-form .form-group label {
     display: block;
     font-size: 16px;
     font-weight: 600;
@@ -39,7 +39,7 @@
     margin-bottom: 5px;
 }
 
-.student-form .form-group input {
+.add-book-form .form-group input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -49,14 +49,14 @@
     color: #333;
 }
 
-.student-form .form-group input:focus {
+.add-book-form .form-group input:focus {
     border-color: #2575fc;
     outline: none;
     box-shadow: 0 0 5px rgba(37, 117, 252, 0.2);
 }
 
-.student-form button {
-    background-color: #4caf50;
+.add-book-form button {
+    background-color: #2575fc;
     color: #fff;
     padding: 10px;
     width: 100%;
@@ -69,6 +69,6 @@
     transition: background-color 0.3s ease;
 }
 
-.student-form button:hover {
-    background-color: #45a049;
+.add-book-form button:hover {
+    background-color: #1d4ed8;
 }

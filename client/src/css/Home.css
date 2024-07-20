@@ -1,36 +1,55 @@
 /* Hero CSS */
 
-.hero{
+.hero {
     display: flex;
-    background-color: #301934;
-    color: #ffc107;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    color: #ffffff;
     height: 92vh;
-    padding-inline:30px ;
+    padding: 0 30px;
+    align-items: center;
+    overflow: hidden; /* Hide overflow to maintain a clean layout */
 }
 
-.hero-content{
-    flex:1;
+.hero-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    max-width: 600px;
 }
 
-.hero-text{
+.hero-text {
     font-size: 4rem;
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.2;
     word-spacing: 1%;
+    color: #ffffff;
 }
 
-.hero-description{
-    font-size: 1.8rem;
-    margin-bottom: 50px;
-    word-spacing: 1px;
+.hero-description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #e0e0e0;
 }
 
-.hero-image{
+.hero-image {
     flex: 1;
-    background: url('Images/home-image.png') center;
-    background-size: 90%;
-    background-repeat:no-repeat ;
+    background: url('Images/home-image.png') center center / cover no-repeat; /* Adjusted for full coverage */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for a 3D effect */
+    height: 80%; /* Adjust height as needed */
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.hero-image {
+    cursor: pointer; /* Change cursor to a pointer */
 }

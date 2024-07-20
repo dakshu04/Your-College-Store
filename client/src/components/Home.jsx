@@ -1,9 +1,8 @@
-import React from 'react'
-import { useEffect } from 'react'
-import '../css/Home.css'
-import axios from 'axios'
 
-export const Home = ({}) => {
+
+import '../css/Home.css'
+
+export const Home = () => {
   
 
   return (
