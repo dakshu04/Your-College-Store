@@ -17,6 +17,7 @@ const AddStudent = () => {
       .then(res => {
         if(res.data.registered) {
             navigate('/dashboard')
+            console.log(res)
         }
       })
       .catch(err => console.log('Axios error is', err));

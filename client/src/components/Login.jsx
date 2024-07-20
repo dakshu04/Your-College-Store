@@ -20,8 +20,8 @@ export const Login = () => {
         if (res.data.login && res.data.role === 'admin') {
           console.log('Navigating to /dashboard')
           navigate('/dashboard');
-        } else {
-          console.log('Conditions not met for navigation')
+        } else if(res.data.login && res.data.role === 'student') {
+          navigate('/')
         }
       })
       .catch(err => console.log('Axios error is', err));
