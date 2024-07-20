@@ -10,6 +10,8 @@ import { Logout } from './components/Logout';
 import axios from "axios"
 import { useEffect } from 'react';
 import AddBooks from './components/AddBook';
+import EditBook from './components/EditBook';
+import { DeleteBook } from './components/DeleteBook';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
           <Route path="/addstudent" element={<AddStudent/>} ></Route>
           <Route path="/logout" element={<Logout setRole = {setRole}/>} ></Route>
           <Route path="/addbook" element={<AddBooks />} ></Route>
+          <Route path="/book/:id" element={<EditBook />} ></Route>
+          <Route path="/delete/:id" element={<DeleteBook />} ></Route>
         </Routes>
       </BrowserRouter>
     </>
