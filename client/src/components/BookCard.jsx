@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import "../css/BookCard.css";
 
-export const BookCard = ({ book }) => {
+export const BookCard = ({ book , role}) => {
     const { name, author, imageUrl, _id } = book; // Ensure _id or a unique identifier is used
 
     return (
@@ -12,10 +12,10 @@ export const BookCard = ({ book }) => {
                 <h3>{name}</h3>
                 <p>{author}</p>
             </div>
-            <div className="book-actions">
+            {role === "admin" && <div className="book-actions">
                 <button><Link to={`/book/${_id}`} className='btn-link'>Edit</Link></button>
-                <button><Link to={`/delete/${_id}`} className='btn-link'>Delete</Link></button>
-            </div>
+                <button><Link to={`/delete/${_id}`} className='btn-link'>Delete</Link></button> </div>
+                }
         </div>
     );
 };

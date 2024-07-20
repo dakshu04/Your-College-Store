@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { BookCard } from "./BookCard";
 
-export const Books = () => {
+export const Books = ({role}) => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export const Books = () => {
     <div className="book-list">
       {
         books.map(book => (
-          <BookCard key={book.id} book={book} />
+          <BookCard key={book.id} book={book}  role = {role}/>
         ))
       }
     </div>

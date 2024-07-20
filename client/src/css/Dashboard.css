@@ -1,0 +1,52 @@
+/* Dashboard styling */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #52c429; /* Dark background for the dashboard */
+    height: 100vh; /* Full height to prevent scrolling */
+    padding: 20px; /* Padding to ensure content does not touch the edges */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Dashboard box styling */
+.dashboard-box {
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Adjust padding for better content fit */
+    width: 320px; /* Increased width for the box */
+    height: 180px; /* Increased height for the box */
+    margin-top: 20px; /* Margin for spacing between boxes */
+    background: #583d72; /* Complementary background color */
+    color: #ffffff; /* White text color for better contrast */
+    text-align: center; /* Center text alignment */
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+    font-size: 1.2rem; /* Adjust font size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Professional shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform on hover */
+    overflow: hidden; /* Ensure no overflow of content */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+/* Optional: Hover effect for dashboard box */
+.dashboard-box:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger and more professional shadow on hover */
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Text styles within dashboard boxes */
+.dashboard-box h2 {
+    margin: 5px 0; /* Reduced margin for headings */
+    font-size: 1.5rem; /* Increased font size for headings */
+}
+
+/* Style for numbers */
+.dashboard-box .number {
+    margin-top: 10px; /* Margin to ensure consistent spacing */
+    font-size: 2rem; /* Larger font size for numbers */
+    font-weight: bold; /* Bold font for numbers */
+}
