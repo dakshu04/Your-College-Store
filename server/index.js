@@ -4,6 +4,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { AdminRouter } from './routes/auth.js';
 import './db.js'
+import { studentRouter } from './routes/student.js';
 
 // Load environment variables as early as possible
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(cors({
 app.use(cookieParser());
 
 app.use('/auth', AdminRouter);
+app.use('/student', studentRouter)
 
 const PORT =  3001;
 app.listen(PORT, () => {

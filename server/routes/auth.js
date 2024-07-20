@@ -6,7 +6,8 @@ import bcrypt from 'bcrypt';
 const router = express.Router();
 
 router.post('/login', async (req, res) => {
-    const { username, password, role } = req.body;
+    try{
+        const { username, password, role } = req.body;
         if (role === 'admin') {
             const admin = await Admin.findOne({ username })
             if (!admin) {
@@ -26,6 +27,10 @@ router.post('/login', async (req, res) => {
         } else {
             
         }
+    } catch(err) {
+        res.json(err)
+    }
+    
 });
 
 export { router as AdminRouter };
