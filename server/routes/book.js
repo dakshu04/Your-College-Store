@@ -21,4 +21,13 @@ router.post('/add',verifyAdmin, async(req, res) => {
     }
 })  
 
+router.get('/books', async(req, res) => {
+    try{
+        const books = await Book.find()
+        return res.json(books)
+    } catch(err) {
+        return res.json(err)
+    }
+})
+
 export { router as bookRouter }
