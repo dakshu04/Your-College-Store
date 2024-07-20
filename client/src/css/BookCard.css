@@ -1,0 +1,120 @@
+/* Books.css */
+
+/* Import the same Google Fonts for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    padding: 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    color: #ffffff; /* White text color for better contrast */
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.no-books-message {
+    text-align: center; /* Center the message horizontally */
+    color: #ffffff; /* White text color for better contrast */
+    font-size: 1.5rem; /* Larger text for emphasis */
+    margin: 20px;
+    width: 100%; /* Full width to align with the book list */
+}
+
+/* Card styling */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content and buttons */
+    background: #ffffff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+    margin: 15px;
+    padding: 20px;
+    width: 280px; /* Fixed width for cards */
+    height: 400px; /* Fixed height to ensure consistency */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    color: #333; /* Text color inside cards */
+    font-family: 'Poppins', sans-serif; /* Consistent font family */
+    position: relative; /* Allows absolute positioning of author name */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    overflow: hidden; /* Ensure no overflow of content */
+}
+
+.book-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.book-card img {
+    width: 100%; /* Ensure image covers the card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60%; /* Limit the maximum height of the image */
+    object-fit: contain; /* Ensure the entire image is visible */
+    border-radius: 4px; /* Rounded corners for image */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.book-card h3 {
+    font-size: 1.4rem; /* Size for book title */
+    margin: 10px 0;
+    color: #333; /* Dark color for title */
+}
+
+.book-card p {
+    font-size: 1rem; /* Size for book description */
+    color: #666; /* Grey color for description */
+    flex-grow: 1; /* Allow the description to take remaining space */
+}
+
+.book-card .author {
+    font-size: 0.9rem; /* Slightly smaller for author name */
+    color: #666; /* Grey color for author */
+    margin: 10px 0; /* Space between description and author name */
+    overflow: hidden; /* Hide overflow if text is long */
+    text-overflow: ellipsis; /* Ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.book-card .button-container {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    margin-top: 10px; /* Margin from content above */
+    margin-bottom: 10px; /* Margin from the bottom of the card */
+}
+
+.book-card button {
+    background-color: #2575fc; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition for button */
+    flex: 1; /* Buttons take equal width */
+    margin: 0 5px; /* Margin between buttons */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.book-card button.edit {
+    background-color: #4caf50; /* Green for Edit button */
+}
+
+.book-card button.delete {
+    background-color: #f44336; /* Red for Delete button */
+}
+
+.book-card button:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}
+
+.book-card button.edit:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.book-card button.delete:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
