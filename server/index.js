@@ -3,8 +3,9 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { AdminRouter } from './routes/auth.js';
-import './db.js'
+import './db.js';
 import { studentRouter } from './routes/student.js';
+import { bookRouter } from './routes/book.js';
 
 // Load environment variables as early as possible
 dotenv.config();
@@ -19,10 +20,18 @@ app.use(cors({
 }));
 app.use(cookieParser());
 
+// Routes
 app.use('/auth', AdminRouter);
-app.use('/student', studentRouter)
+app.use('/student', studentRouter);
+app.use('/book', bookRouter);   
 
-const PORT =  3001;
+// Basic error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
