@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import { AdminRouter } from './routes/auth.js';
+import './db.js'
 
 // Load environment variables as early as possible
 dotenv.config();
@@ -17,9 +18,9 @@ app.use(cors({
 }));
 app.use(cookieParser());
 
-dotenv.config()
-app.use('/auth', AdminRouter)
+app.use('/auth', AdminRouter);
 
-app.listen(process.env.PORT, () => {
-    console.log("Server is running")
+const PORT =  3001;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });

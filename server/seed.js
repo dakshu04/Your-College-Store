@@ -8,7 +8,7 @@ async function AdminAccount() {
         const adminCount = await Admin.countDocuments();
         if (adminCount === 0) {
             const hashPassword = await bcrypt.hash('adminpassword', 10);
-            const newAdmin = new Admin({
+            const newAdmin = new Admin({ 
                 username: 'admin',
                 password: hashPassword
             });
@@ -18,7 +18,7 @@ async function AdminAccount() {
             console.log("Account already existed");
         }
     } catch (err) {
-        console.error(err); // Properly log the error
+        console.log(err); // Properly log the error
     }
 }
 

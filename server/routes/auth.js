@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/login', async (req, res) => {
     const { username, password, role } = req.body;
         if (role === 'admin') {
-            const admin = await Admin.findOne({ username });
+            const admin = await Admin.findOne({ username })
             if (!admin) {
                 return res.json({message: "admin not registered"})
             }
@@ -18,8 +18,8 @@ router.post('/login', async (req, res) => {
                 return res.json({message: "wrong password"})
             }
 
-            const token = jwt.sign({ username: admin.username, role: 'admin' }, process.env.Admin_Key);
-            res.cookie('token', token, { httpOnly: true, secure: false }); // Set secure: true only in production
+            const token = jwt.sign({ username: admin.username, role: 'admin' }, process.env.Admin_Key)
+            res.cookie('token', token, { httpOnly: true, secure: true }); // Set secure: true only in production
             return res.json({ login: true, role: 'admin' });
         } else if (role === 'student') {
             
